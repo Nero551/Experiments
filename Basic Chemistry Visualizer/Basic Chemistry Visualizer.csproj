@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../PULib/PULib.csproj" />
+    <ProjectReference Include="../../Libraries/PULib/PULib.csproj" />
   </ItemGroup>
 
 </Project>

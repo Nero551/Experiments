@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nero551/Main/GameDev/Projects/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj": {}
+    "/home/nero551/Main/Dev/Experiments/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj": {}
   },
   "projects": {
-    "/home/nero551/Main/GameDev/Projects/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj": {
+    "/home/nero551/Main/Dev/Experiments/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nero551/Main/GameDev/Projects/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj",
+        "projectUniqueName": "/home/nero551/Main/Dev/Experiments/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj",
         "projectName": "Networking But C# only (No Godot)",
-        "projectPath": "/home/nero551/Main/GameDev/Projects/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj",
+        "projectPath": "/home/nero551/Main/Dev/Experiments/Networking But C# only (No Godot)/Networking But C# only (No Godot).csproj",
         "packagesPath": "/home/nero551/.nuget/packages/",
-        "outputPath": "/home/nero551/Main/GameDev/Projects/Networking But C# only (No Godot)/obj/",
+        "outputPath": "/home/nero551/Main/Dev/Experiments/Networking But C# only (No Godot)/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nero551/.nuget/NuGet/NuGet.Config"

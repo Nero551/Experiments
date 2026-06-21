@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Networking But C# only (No Godot)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72cfad3557fdd51eb4a2f9bde8749602ab76dbec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fce9f083869e60a6fc2d88f14b67189ac39e0b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Networking But C# only (No Godot)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Networking But C# only (No Godot)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

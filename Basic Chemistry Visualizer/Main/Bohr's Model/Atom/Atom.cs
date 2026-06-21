@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Godot;
 using Godot.Collections;
-using PULib;
 
 public partial class Atom : Node3D
 {
@@ -31,7 +30,8 @@ public partial class Atom : Node3D
 
     public static Atom Create(Element element, Vector3 pos, Node parent)
     {
-        var elementData = JSONHelper.JSONToCSharp($"Main/Chemical Elements/{element}");
+        
+        var elementData = PULib.JSONHelper.JSONToCSharp($"Main/Chemical Elements/{element}");
         var scene = GD.Load<PackedScene>("res://Main/Scenes/Atom.tscn");
         Atom atom = scene.Instantiate<Atom>();
         atom.Position = pos;
