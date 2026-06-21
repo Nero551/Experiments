@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ifsrbkagdaq4"]
+
+[ext_resource type="Script" uid="uid://d2rd8nmpa885a" path="res://Main/2D/Coordinate Plane/Core/CartesianPlane.cs" id="1_7dk2f"]
+
+[node name="Math" type="Node2D" unique_id=1976431736]
+
+[node name="Cartesian Plane" type="Node2D" parent="." unique_id=1831727838]
+script = ExtResource("1_7dk2f")
+
+[node name="Content" type="Node2D" parent="Cartesian Plane" unique_id=2144951206]
+z_index = 2
+
+[node name="LineSegments" type="Node2D" parent="Cartesian Plane/Content" unique_id=1724026809]
+
+[node name="Points" type="Node2D" parent="Cartesian Plane/Content" unique_id=1358684299]
+
+[node name="StraightLines" type="Node2D" parent="Cartesian Plane/Content" unique_id=1701904029]
+
+[node name="Rays" type="Node2D" parent="Cartesian Plane/Content" unique_id=983628961]
+
+[node name="Circles" type="Node2D" parent="Cartesian Plane/Content" unique_id=1884109163]
+
+[node name="Squares" type="Node2D" parent="Cartesian Plane/Content" unique_id=1417734938]
+
+[node name="Rectangles" type="Node2D" parent="Cartesian Plane/Content" unique_id=1757262539]
+
+[node name="Rhombuses" type="Node2D" parent="Cartesian Plane/Content" unique_id=1700968278]
+
+[node name="Parallelograms" type="Node2D" parent="Cartesian Plane/Content" unique_id=1140518491]
+
+[node name="Functions" type="Node2D" parent="Cartesian Plane/Content" unique_id=277533811]
+
+[node name="Core" type="Node2D" parent="Cartesian Plane" unique_id=743349825]
+
+[node name="Axis" type="Node2D" parent="Cartesian Plane/Core" unique_id=788149757]
+
+[node name="Plane" type="Node2D" parent="Cartesian Plane/Core" unique_id=1033520145]
+z_index = -1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1520350185]
+zoom = Vector2(10, 10)

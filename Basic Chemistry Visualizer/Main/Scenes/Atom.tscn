@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://m8gv8f77hlrl"]
+
+[ext_resource type="Script" uid="uid://rn2377tdv7es" path="res://Main/Bohr's Model/Atom/Atom.cs" id="1_p4k6f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukugj"]
+shading_mode = 0
+albedo_color = Color(0.30202016, 0.76170987, 0.43323725, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_tu50s"]
+
+[node name="Atom" type="Node3D" unique_id=1577389052]
+script = ExtResource("1_p4k6f")
+
+[node name="Shells" type="Node3D" parent="." unique_id=668173251]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="Barrier" type="MeshInstance3D" parent="." unique_id=1088109106]
+material_override = SubResource("StandardMaterial3D_ukugj")
+transparency = 0.85
+mesh = SubResource("SphereMesh_tu50s")

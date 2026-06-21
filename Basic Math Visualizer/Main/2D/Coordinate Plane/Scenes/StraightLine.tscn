@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cua62qj8ceklf"]
+
+[ext_resource type="Script" uid="uid://c4jw06lnali4e" path="res://Main/2D/Coordinate Plane/Elements/StraightLine.cs" id="1_b6vhq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yh6sh"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_b6vhq"]
+size = Vector3(1.48, 1.1, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_yh6sh"]
+size = Vector3(1.48, -1.1, 1)
+
+[node name="StraightLine" type="Node2D" unique_id=1408779541]
+script = ExtResource("1_b6vhq")
+
+[node name="Line" type="Node2D" parent="." unique_id=900612796]
+scale = Vector2(12, 0.5)
+
+[node name="LineMesh" type="MeshInstance2D" parent="Line" unique_id=1414000112]
+mesh = SubResource("BoxMesh_yh6sh")
+
+[node name="Arrow1" type="Node2D" parent="." unique_id=2140241686]
+position = Vector2(-6.5, 0)
+rotation = 1.5707964
+
+[node name="Arrow1Mesh" type="MeshInstance2D" parent="Arrow1" unique_id=1541796623]
+mesh = SubResource("PrismMesh_b6vhq")
+
+[node name="Arrow2" type="Node2D" parent="." unique_id=433723598]
+position = Vector2(6.5, 0)
+rotation = 1.5707964
+
+[node name="Arrow2Mesh" type="MeshInstance2D" parent="Arrow2" unique_id=2025676495]
+mesh = SubResource("PrismMesh_yh6sh")
