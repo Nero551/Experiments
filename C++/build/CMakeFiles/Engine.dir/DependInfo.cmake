@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/nero551/Main/GameDev/Projects/C++/Engine/Entity.cpp" "CMakeFiles/Engine.dir/Engine/Entity.cpp.o" "gcc" "CMakeFiles/Engine.dir/Engine/Entity.cpp.o.d"
-  "/home/nero551/Main/GameDev/Projects/C++/Main.cpp" "CMakeFiles/Engine.dir/Main.cpp.o" "gcc" "CMakeFiles/Engine.dir/Main.cpp.o.d"
+  "/home/nero551/Main/Dev/Experiments/C++/Main.cpp" "CMakeFiles/Engine.dir/Main.cpp.o" "gcc" "CMakeFiles/Engine.dir/Main.cpp.o.d"
   "" "Engine" "gcc" "CMakeFiles/Engine.dir/link.d"
   )
 

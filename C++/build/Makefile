@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nero551/Main/GameDev/Projects/C++
+CMAKE_SOURCE_DIR = /home/nero551/Main/Dev/Experiments/C++
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nero551/Main/GameDev/Projects/C++/build
+CMAKE_BINARY_DIR = /home/nero551/Main/Dev/Experiments/C++/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/GameDev/Projects/C++/build/CMakeFiles /home/nero551/Main/GameDev/Projects/C++/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles /home/nero551/Main/Dev/Experiments/C++/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/GameDev/Projects/C++/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,30 +129,6 @@ Engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/build
 .PHONY : Engine/fast
 
-Engine/Entity.o: Engine/Entity.cpp.o
-.PHONY : Engine/Entity.o
-
-# target to build an object file
-Engine/Entity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/Engine/Entity.cpp.o
-.PHONY : Engine/Entity.cpp.o
-
-Engine/Entity.i: Engine/Entity.cpp.i
-.PHONY : Engine/Entity.i
-
-# target to preprocess a source file
-Engine/Entity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/Engine/Entity.cpp.i
-.PHONY : Engine/Entity.cpp.i
-
-Engine/Entity.s: Engine/Entity.cpp.s
-.PHONY : Engine/Entity.s
-
-# target to generate assembly for a file
-Engine/Entity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/Engine/Entity.cpp.s
-.PHONY : Engine/Entity.cpp.s
-
 Main.o: Main.cpp.o
 .PHONY : Main.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Engine"
-	@echo "... Engine/Entity.o"
-	@echo "... Engine/Entity.i"
-	@echo "... Engine/Entity.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"

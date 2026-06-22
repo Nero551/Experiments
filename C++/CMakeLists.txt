@@ -6,5 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Engine
     Main.cpp
-    Engine/Entity.cpp
+)
+
+find_package(glfw3 REQUIRED)
+
+target_link_libraries(Engine
+    glfw
+    GL
 )

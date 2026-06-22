@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/nero551/Main/GameDev/Projects/C++/build/cmake_install.cmake"
+		"/home/nero551/Main/Dev/Experiments/C++/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

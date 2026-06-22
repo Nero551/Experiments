@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nero551/Main/GameDev/Projects/C++
+CMAKE_SOURCE_DIR = /home/nero551/Main/Dev/Experiments/C++
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nero551/Main/GameDev/Projects/C++/build
+CMAKE_BINARY_DIR = /home/nero551/Main/Dev/Experiments/C++/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Engine.dir/depend.make
@@ -73,47 +73,32 @@ CMakeFiles/Engine.dir/codegen:
 .PHONY : CMakeFiles/Engine.dir/codegen
 
 CMakeFiles/Engine.dir/Main.cpp.o: CMakeFiles/Engine.dir/flags.make
-CMakeFiles/Engine.dir/Main.cpp.o: /home/nero551/Main/GameDev/Projects/C++/Main.cpp
+CMakeFiles/Engine.dir/Main.cpp.o: /home/nero551/Main/Dev/Experiments/C++/Main.cpp
 CMakeFiles/Engine.dir/Main.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/GameDev/Projects/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Engine.dir/Main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/Main.cpp.o -MF CMakeFiles/Engine.dir/Main.cpp.o.d -o CMakeFiles/Engine.dir/Main.cpp.o -c /home/nero551/Main/GameDev/Projects/C++/Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Engine.dir/Main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/Main.cpp.o -MF CMakeFiles/Engine.dir/Main.cpp.o.d -o CMakeFiles/Engine.dir/Main.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/Main.cpp
 
 CMakeFiles/Engine.dir/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/GameDev/Projects/C++/Main.cpp > CMakeFiles/Engine.dir/Main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/Dev/Experiments/C++/Main.cpp > CMakeFiles/Engine.dir/Main.cpp.i
 
 CMakeFiles/Engine.dir/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/GameDev/Projects/C++/Main.cpp -o CMakeFiles/Engine.dir/Main.cpp.s
-
-CMakeFiles/Engine.dir/Engine/Entity.cpp.o: CMakeFiles/Engine.dir/flags.make
-CMakeFiles/Engine.dir/Engine/Entity.cpp.o: /home/nero551/Main/GameDev/Projects/C++/Engine/Entity.cpp
-CMakeFiles/Engine.dir/Engine/Entity.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/GameDev/Projects/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Engine.dir/Engine/Entity.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/Engine/Entity.cpp.o -MF CMakeFiles/Engine.dir/Engine/Entity.cpp.o.d -o CMakeFiles/Engine.dir/Engine/Entity.cpp.o -c /home/nero551/Main/GameDev/Projects/C++/Engine/Entity.cpp
-
-CMakeFiles/Engine.dir/Engine/Entity.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/Engine/Entity.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/GameDev/Projects/C++/Engine/Entity.cpp > CMakeFiles/Engine.dir/Engine/Entity.cpp.i
-
-CMakeFiles/Engine.dir/Engine/Entity.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/Engine/Entity.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/GameDev/Projects/C++/Engine/Entity.cpp -o CMakeFiles/Engine.dir/Engine/Entity.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/Main.cpp -o CMakeFiles/Engine.dir/Main.cpp.s
 
 # Object files for target Engine
 Engine_OBJECTS = \
-"CMakeFiles/Engine.dir/Main.cpp.o" \
-"CMakeFiles/Engine.dir/Engine/Entity.cpp.o"
+"CMakeFiles/Engine.dir/Main.cpp.o"
 
 # External object files for target Engine
 Engine_EXTERNAL_OBJECTS =
 
 Engine: CMakeFiles/Engine.dir/Main.cpp.o
-Engine: CMakeFiles/Engine.dir/Engine/Entity.cpp.o
 Engine: CMakeFiles/Engine.dir/build.make
 Engine: CMakeFiles/Engine.dir/compiler_depend.ts
+Engine: /usr/lib/libglfw.so.3.4
 Engine: CMakeFiles/Engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nero551/Main/GameDev/Projects/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,6 +110,6 @@ CMakeFiles/Engine.dir/clean:
 .PHONY : CMakeFiles/Engine.dir/clean
 
 CMakeFiles/Engine.dir/depend:
-	cd /home/nero551/Main/GameDev/Projects/C++/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nero551/Main/GameDev/Projects/C++ /home/nero551/Main/GameDev/Projects/C++ /home/nero551/Main/GameDev/Projects/C++/build /home/nero551/Main/GameDev/Projects/C++/build /home/nero551/Main/GameDev/Projects/C++/build/CMakeFiles/Engine.dir/DependInfo.cmake "--color=$(COLOR)" Engine
+	cd /home/nero551/Main/Dev/Experiments/C++/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nero551/Main/Dev/Experiments/C++ /home/nero551/Main/Dev/Experiments/C++ /home/nero551/Main/Dev/Experiments/C++/build /home/nero551/Main/Dev/Experiments/C++/build /home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles/Engine.dir/DependInfo.cmake "--color=$(COLOR)" Engine
 .PHONY : CMakeFiles/Engine.dir/depend
 
