@@ -2,7 +2,8 @@ Engine: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o \
-  CMakeFiles/Engine.dir/Main.cpp.o \
+  CMakeFiles/Engine.dir/src/Main.cpp.o \
+  CMakeFiles/Engine.dir/glad.c.o \
   /usr/lib/libglfw.so.3.4 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libGL.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libstdc++.so \
@@ -55,7 +56,9 @@ Engine: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o:
 
-CMakeFiles/Engine.dir/Main.cpp.o:
+CMakeFiles/Engine.dir/src/Main.cpp.o:
+
+CMakeFiles/Engine.dir/glad.c.o:
 
 /usr/lib/libglfw.so.3.4:
 

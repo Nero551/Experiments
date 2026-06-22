@@ -1,12 +1,14 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Engine.dir/link.d"
-  "CMakeFiles/Engine.dir/Main.cpp.o"
-  "CMakeFiles/Engine.dir/Main.cpp.o.d"
+  "CMakeFiles/Engine.dir/glad.c.o"
+  "CMakeFiles/Engine.dir/glad.c.o.d"
+  "CMakeFiles/Engine.dir/src/Main.cpp.o"
+  "CMakeFiles/Engine.dir/src/Main.cpp.o.d"
   "Engine"
   "Engine.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C CXX)
   include(CMakeFiles/Engine.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

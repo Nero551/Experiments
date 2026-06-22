@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/nero551/Main/Dev/Experiments/C++/build",
+  "command": "/usr/bin/c++  -I/home/nero551/Main/Dev/Experiments/C++/Libraries/include -std=gnu++17 -o CMakeFiles/Engine.dir/src/Main.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/Main.cpp",
+  "file": "/home/nero551/Main/Dev/Experiments/C++/src/Main.cpp",
+  "output": "CMakeFiles/Engine.dir/src/Main.cpp.o"
+},
+{
+  "directory": "/home/nero551/Main/Dev/Experiments/C++/build",
+  "command": "/usr/bin/cc  -I/home/nero551/Main/Dev/Experiments/C++/Libraries/include  -o CMakeFiles/Engine.dir/glad.c.o -c /home/nero551/Main/Dev/Experiments/C++/glad.c",
+  "file": "/home/nero551/Main/Dev/Experiments/C++/glad.c",
+  "output": "CMakeFiles/Engine.dir/glad.c.o"
+}
+]
