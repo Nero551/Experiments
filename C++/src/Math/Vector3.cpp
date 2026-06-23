@@ -1,6 +1,8 @@
 #include "Vector.h"
+#include <numbers>
 
 Vector3::Vector3(float x, float y, float z) : X(x), Y(y), Z(z) {}
+
 Vector3 Vector3::operator+(const Vector3 &vec3) const {
   return {X + vec3.X, Y + vec3.Y, Z + vec3.Z};
 }
@@ -23,7 +25,13 @@ Vector3 operator/(float scalar, const Vector3 &vec3) {
   return vec3 * (1.0f / scalar);
 }
 
+std::ostream &operator<<(std::ostream &os, const Vector3 &vec3) {
+  os << "(" << vec3.X << ", " << vec3.Y << ", " << vec3.Z << ")";
+  return os;
+}
+
 float Vector3::LengthSquared() const { return X * X + Y * Y + Z * Z; }
+
 float Vector3::Length() const { return Vector3::LengthSquared(); };
 
 Vector3 Vector3::Normalized() const {

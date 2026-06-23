@@ -1,3 +1,4 @@
+#include <ostream>
 struct Vector2 {
   float X;
   float Y;
@@ -14,6 +15,7 @@ struct Vector2 {
 };
 Vector2 operator*(float scalar, const Vector2 &vec2);
 Vector2 operator/(float scalar, const Vector2 &vec2);
+std::ostream &operator<<(std::ostream &os, const Vector2 &vec);
 
 struct Vector3 {
   float X;
@@ -30,6 +32,6 @@ struct Vector3 {
   Vector3 operator*(float scalar) const;
   Vector3 operator/(float scalar) const;
 };
-
 Vector3 operator*(float scalar, const Vector3 &vec3);
 Vector3 operator/(float scalar, const Vector3 &vec3);
+std::ostream &operator<<(std::ostream &os, const Vector3 &vec);

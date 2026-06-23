@@ -1,5 +1,7 @@
 #include "Vector.h"
 #include <cmath>
+#include <iostream>
+#include <ostream>
 
 Vector2::Vector2(float x, float y) : X(x), Y(y) {}
 
@@ -23,6 +25,11 @@ Vector2 operator*(float scalar, const Vector2 &vec2) { return vec2 * scalar; }
 
 Vector2 operator/(float scalar, const Vector2 &vec2) {
   return vec2 * (1.0f / scalar);
+}
+
+std::ostream &operator<<(std::ostream &os, const Vector2 &vec2) {
+  os << "(" << vec2.X << ", " << vec2.Y << ")";
+  return os;
 }
 
 float Vector2::LengthSquared() const { return X * X + Y * Y; }
