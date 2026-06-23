@@ -92,6 +92,13 @@ all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles 0
 .PHONY : all
 
+# The main codegen target
+codegen: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles /home/nero551/Main/Dev/Experiments/C++/build//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles 0
+.PHONY : codegen
+
 # The main clean target
 clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
@@ -177,12 +184,61 @@ src/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
+src/Math/Vector2.o: src/Math/Vector2.cpp.o
+.PHONY : src/Math/Vector2.o
+
+# target to build an object file
+src/Math/Vector2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o
+.PHONY : src/Math/Vector2.cpp.o
+
+src/Math/Vector2.i: src/Math/Vector2.cpp.i
+.PHONY : src/Math/Vector2.i
+
+# target to preprocess a source file
+src/Math/Vector2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector2.cpp.i
+.PHONY : src/Math/Vector2.cpp.i
+
+src/Math/Vector2.s: src/Math/Vector2.cpp.s
+.PHONY : src/Math/Vector2.s
+
+# target to generate assembly for a file
+src/Math/Vector2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector2.cpp.s
+.PHONY : src/Math/Vector2.cpp.s
+
+src/Math/Vector3.o: src/Math/Vector3.cpp.o
+.PHONY : src/Math/Vector3.o
+
+# target to build an object file
+src/Math/Vector3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o
+.PHONY : src/Math/Vector3.cpp.o
+
+src/Math/Vector3.i: src/Math/Vector3.cpp.i
+.PHONY : src/Math/Vector3.i
+
+# target to preprocess a source file
+src/Math/Vector3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector3.cpp.i
+.PHONY : src/Math/Vector3.cpp.i
+
+src/Math/Vector3.s: src/Math/Vector3.cpp.s
+.PHONY : src/Math/Vector3.s
+
+# target to generate assembly for a file
+src/Math/Vector3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector3.cpp.s
+.PHONY : src/Math/Vector3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Engine"
@@ -192,6 +248,12 @@ help:
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
+	@echo "... src/Math/Vector2.o"
+	@echo "... src/Math/Vector2.i"
+	@echo "... src/Math/Vector2.s"
+	@echo "... src/Math/Vector3.o"
+	@echo "... src/Math/Vector3.i"
+	@echo "... src/Math/Vector3.s"
 .PHONY : help
 
 

@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/nero551/Main/Dev/Experiments/C++/glad.c" "CMakeFiles/Engine.dir/glad.c.o" "gcc" "CMakeFiles/Engine.dir/glad.c.o.d"
   "/home/nero551/Main/Dev/Experiments/C++/src/Main.cpp" "CMakeFiles/Engine.dir/src/Main.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Main.cpp.o.d"
+  "/home/nero551/Main/Dev/Experiments/C++/src/Math/Vector2.cpp" "CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o.d"
+  "/home/nero551/Main/Dev/Experiments/C++/src/Math/Vector3.cpp" "CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o.d"
   "" "Engine" "gcc" "CMakeFiles/Engine.dir/link.d"
   )
 

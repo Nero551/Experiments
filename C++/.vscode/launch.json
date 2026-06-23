@@ -2,15 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run C++",
+      "name": "C++",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/Engine",
-      "args": [],
       "cwd": "${workspaceFolder}",
-      "stopAtEntry": false,
       "MIMode": "gdb",
-      "preLaunchTask": "cmake build"
+      "preLaunchTask": "build"
     }
   ]
 }

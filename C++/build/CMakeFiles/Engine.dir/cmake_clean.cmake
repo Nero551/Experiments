@@ -4,6 +4,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Engine.dir/glad.c.o.d"
   "CMakeFiles/Engine.dir/src/Main.cpp.o"
   "CMakeFiles/Engine.dir/src/Main.cpp.o.d"
+  "CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o"
+  "CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o.d"
+  "CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o"
+  "CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o.d"
   "Engine"
   "Engine.pdb"
 )
