@@ -160,101 +160,29 @@ glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/glad.c.s
 .PHONY : glad.c.s
 
-src/Engine/Engine.o: src/Engine/Engine.cpp.o
-.PHONY : src/Engine/Engine.o
+src/OpenGL.o: src/OpenGL.cpp.o
+.PHONY : src/OpenGL.o
 
 # target to build an object file
-src/Engine/Engine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o
-.PHONY : src/Engine/Engine.cpp.o
+src/OpenGL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/OpenGL.cpp.o
+.PHONY : src/OpenGL.cpp.o
 
-src/Engine/Engine.i: src/Engine/Engine.cpp.i
-.PHONY : src/Engine/Engine.i
-
-# target to preprocess a source file
-src/Engine/Engine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Engine/Engine.cpp.i
-.PHONY : src/Engine/Engine.cpp.i
-
-src/Engine/Engine.s: src/Engine/Engine.cpp.s
-.PHONY : src/Engine/Engine.s
-
-# target to generate assembly for a file
-src/Engine/Engine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Engine/Engine.cpp.s
-.PHONY : src/Engine/Engine.cpp.s
-
-src/Main.o: src/Main.cpp.o
-.PHONY : src/Main.o
-
-# target to build an object file
-src/Main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Main.cpp.o
-.PHONY : src/Main.cpp.o
-
-src/Main.i: src/Main.cpp.i
-.PHONY : src/Main.i
+src/OpenGL.i: src/OpenGL.cpp.i
+.PHONY : src/OpenGL.i
 
 # target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
+src/OpenGL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/OpenGL.cpp.i
+.PHONY : src/OpenGL.cpp.i
 
-src/Main.s: src/Main.cpp.s
-.PHONY : src/Main.s
-
-# target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
-
-src/Math/Vector2.o: src/Math/Vector2.cpp.o
-.PHONY : src/Math/Vector2.o
-
-# target to build an object file
-src/Math/Vector2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o
-.PHONY : src/Math/Vector2.cpp.o
-
-src/Math/Vector2.i: src/Math/Vector2.cpp.i
-.PHONY : src/Math/Vector2.i
-
-# target to preprocess a source file
-src/Math/Vector2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector2.cpp.i
-.PHONY : src/Math/Vector2.cpp.i
-
-src/Math/Vector2.s: src/Math/Vector2.cpp.s
-.PHONY : src/Math/Vector2.s
+src/OpenGL.s: src/OpenGL.cpp.s
+.PHONY : src/OpenGL.s
 
 # target to generate assembly for a file
-src/Math/Vector2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector2.cpp.s
-.PHONY : src/Math/Vector2.cpp.s
-
-src/Math/Vector3.o: src/Math/Vector3.cpp.o
-.PHONY : src/Math/Vector3.o
-
-# target to build an object file
-src/Math/Vector3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o
-.PHONY : src/Math/Vector3.cpp.o
-
-src/Math/Vector3.i: src/Math/Vector3.cpp.i
-.PHONY : src/Math/Vector3.i
-
-# target to preprocess a source file
-src/Math/Vector3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector3.cpp.i
-.PHONY : src/Math/Vector3.cpp.i
-
-src/Math/Vector3.s: src/Math/Vector3.cpp.s
-.PHONY : src/Math/Vector3.s
-
-# target to generate assembly for a file
-src/Math/Vector3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/Math/Vector3.cpp.s
-.PHONY : src/Math/Vector3.cpp.s
+src/OpenGL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Engine.dir/build.make CMakeFiles/Engine.dir/src/OpenGL.cpp.s
+.PHONY : src/OpenGL.cpp.s
 
 # Help Target
 help:
@@ -269,18 +197,9 @@ help:
 	@echo "... glad.o"
 	@echo "... glad.i"
 	@echo "... glad.s"
-	@echo "... src/Engine/Engine.o"
-	@echo "... src/Engine/Engine.i"
-	@echo "... src/Engine/Engine.s"
-	@echo "... src/Main.o"
-	@echo "... src/Main.i"
-	@echo "... src/Main.s"
-	@echo "... src/Math/Vector2.o"
-	@echo "... src/Math/Vector2.i"
-	@echo "... src/Math/Vector2.s"
-	@echo "... src/Math/Vector3.o"
-	@echo "... src/Math/Vector3.i"
-	@echo "... src/Math/Vector3.s"
+	@echo "... src/OpenGL.o"
+	@echo "... src/OpenGL.i"
+	@echo "... src/OpenGL.s"
 .PHONY : help
 
 

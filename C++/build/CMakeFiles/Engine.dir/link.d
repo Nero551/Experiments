@@ -2,11 +2,8 @@ Engine: \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib64/Scrt1.o \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib64/crti.o \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o \
-  CMakeFiles/Engine.dir/src/Main.cpp.o \
-  CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o \
-  CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o \
+  CMakeFiles/Engine.dir/src/OpenGL.cpp.o \
   CMakeFiles/Engine.dir/glad.c.o \
-  CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o \
   /usr/lib/libglfw.so.3.4 \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib64/libGL.so \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib64/libstdc++.so \
@@ -55,15 +52,9 @@ Engine: \
 
 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o:
 
-CMakeFiles/Engine.dir/src/Main.cpp.o:
-
-CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o:
-
-CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o:
+CMakeFiles/Engine.dir/src/OpenGL.cpp.o:
 
 CMakeFiles/Engine.dir/glad.c.o:
-
-CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o:
 
 /usr/lib/libglfw.so.3.4:
 

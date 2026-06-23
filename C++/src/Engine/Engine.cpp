@@ -1,12 +1,13 @@
-#include "../PlusUltra.h"
+#include "../Depth/Depth.h"
+#include "Engine.h"
 #include <iostream>
 
 Entity entity;
 
 void Engine::Start() { entity.Velocity = {0, 5, 0}; }
 
-void Engine::Process(double delta) {
-  entity.Position += entity.Velocity * delta;
+void Engine::Process(double dt) {
+  entity.Position += entity.Velocity * dt;
   std::cout << entity.Position << "\n";
 }
 

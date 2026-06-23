@@ -1,21 +1,25 @@
-#include "PlusUltra.h"
+#include "Engine/Engine.h"
 #include <chrono>
 
-const double Delta = 0.016;
+using Clock = std::chrono::steady_clock;
+
+const double DeltaTime = 0.016;
 
 int main() {
   Engine engine;
-  auto LastCall = std::chrono::steady_clock::now();
+
+  auto LastCall = Clock::now();
 
   engine.Running = true;
   engine.Start();
-  while (engine.Running) {
-    auto now = std::chrono::steady_clock::now();
 
-    if (now - LastCall >= std::chrono::milliseconds(int(Delta * 1000))) {
+  while (engine.Running) {
+    auto now = Clock::now();
+
+    if (now - LastCall >= std::chrono::milliseconds(int(DeltaTime * 1000))) {
       LastCall = now;
-      engine.Time += Delta;
-      engine.Process(Delta);
+      engine.Time += DeltaTime;
+      engine.Process(DeltaTime);
     }
   }
 

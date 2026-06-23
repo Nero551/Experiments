@@ -8,11 +8,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(Engine)
 add_executable(Engine
-    src/Main.cpp
-    src/Math/Vector2.cpp
-    src/Math/Vector3.cpp
+    src/OpenGL.cpp
     glad.c
-    src/Engine/Engine.cpp
 )
 
 

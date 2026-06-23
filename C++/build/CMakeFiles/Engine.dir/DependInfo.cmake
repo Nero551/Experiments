@@ -9,10 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/nero551/Main/Dev/Experiments/C++/glad.c" "CMakeFiles/Engine.dir/glad.c.o" "gcc" "CMakeFiles/Engine.dir/glad.c.o.d"
-  "/home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp" "CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o.d"
-  "/home/nero551/Main/Dev/Experiments/C++/src/Main.cpp" "CMakeFiles/Engine.dir/src/Main.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Main.cpp.o.d"
-  "/home/nero551/Main/Dev/Experiments/C++/src/Math/Vector2.cpp" "CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o.d"
-  "/home/nero551/Main/Dev/Experiments/C++/src/Math/Vector3.cpp" "CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o.d"
+  "/home/nero551/Main/Dev/Experiments/C++/src/OpenGL.cpp" "CMakeFiles/Engine.dir/src/OpenGL.cpp.o" "gcc" "CMakeFiles/Engine.dir/src/OpenGL.cpp.o.d"
   "" "Engine" "gcc" "CMakeFiles/Engine.dir/link.d"
   )
 

@@ -72,52 +72,24 @@ include CMakeFiles/Engine.dir/flags.make
 CMakeFiles/Engine.dir/codegen:
 .PHONY : CMakeFiles/Engine.dir/codegen
 
-CMakeFiles/Engine.dir/src/Main.cpp.o: CMakeFiles/Engine.dir/flags.make
-CMakeFiles/Engine.dir/src/Main.cpp.o: /home/nero551/Main/Dev/Experiments/C++/src/Main.cpp
-CMakeFiles/Engine.dir/src/Main.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Engine.dir/src/Main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/src/Main.cpp.o -MF CMakeFiles/Engine.dir/src/Main.cpp.o.d -o CMakeFiles/Engine.dir/src/Main.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/Main.cpp
+CMakeFiles/Engine.dir/src/OpenGL.cpp.o: CMakeFiles/Engine.dir/flags.make
+CMakeFiles/Engine.dir/src/OpenGL.cpp.o: /home/nero551/Main/Dev/Experiments/C++/src/OpenGL.cpp
+CMakeFiles/Engine.dir/src/OpenGL.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Engine.dir/src/OpenGL.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/src/OpenGL.cpp.o -MF CMakeFiles/Engine.dir/src/OpenGL.cpp.o.d -o CMakeFiles/Engine.dir/src/OpenGL.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/OpenGL.cpp
 
-CMakeFiles/Engine.dir/src/Main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/src/Main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/Dev/Experiments/C++/src/Main.cpp > CMakeFiles/Engine.dir/src/Main.cpp.i
+CMakeFiles/Engine.dir/src/OpenGL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/src/OpenGL.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/Dev/Experiments/C++/src/OpenGL.cpp > CMakeFiles/Engine.dir/src/OpenGL.cpp.i
 
-CMakeFiles/Engine.dir/src/Main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/src/Main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/src/Main.cpp -o CMakeFiles/Engine.dir/src/Main.cpp.s
-
-CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o: CMakeFiles/Engine.dir/flags.make
-CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o: /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector2.cpp
-CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o -MF CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o.d -o CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector2.cpp
-
-CMakeFiles/Engine.dir/src/Math/Vector2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/src/Math/Vector2.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector2.cpp > CMakeFiles/Engine.dir/src/Math/Vector2.cpp.i
-
-CMakeFiles/Engine.dir/src/Math/Vector2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/src/Math/Vector2.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector2.cpp -o CMakeFiles/Engine.dir/src/Math/Vector2.cpp.s
-
-CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o: CMakeFiles/Engine.dir/flags.make
-CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o: /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector3.cpp
-CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o -MF CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o.d -o CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector3.cpp
-
-CMakeFiles/Engine.dir/src/Math/Vector3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/src/Math/Vector3.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector3.cpp > CMakeFiles/Engine.dir/src/Math/Vector3.cpp.i
-
-CMakeFiles/Engine.dir/src/Math/Vector3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/src/Math/Vector3.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/src/Math/Vector3.cpp -o CMakeFiles/Engine.dir/src/Math/Vector3.cpp.s
+CMakeFiles/Engine.dir/src/OpenGL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/src/OpenGL.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/src/OpenGL.cpp -o CMakeFiles/Engine.dir/src/OpenGL.cpp.s
 
 CMakeFiles/Engine.dir/glad.c.o: CMakeFiles/Engine.dir/flags.make
 CMakeFiles/Engine.dir/glad.c.o: /home/nero551/Main/Dev/Experiments/C++/glad.c
 CMakeFiles/Engine.dir/glad.c.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Engine.dir/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Engine.dir/glad.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Engine.dir/glad.c.o -MF CMakeFiles/Engine.dir/glad.c.o.d -o CMakeFiles/Engine.dir/glad.c.o -c /home/nero551/Main/Dev/Experiments/C++/glad.c
 
 CMakeFiles/Engine.dir/glad.c.i: cmake_force
@@ -128,41 +100,21 @@ CMakeFiles/Engine.dir/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Engine.dir/glad.c.s"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/glad.c -o CMakeFiles/Engine.dir/glad.c.s
 
-CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o: CMakeFiles/Engine.dir/flags.make
-CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o: /home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp
-CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o: CMakeFiles/Engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o -MF CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o.d -o CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp
-
-CMakeFiles/Engine.dir/src/Engine/Engine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Engine.dir/src/Engine/Engine.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp > CMakeFiles/Engine.dir/src/Engine/Engine.cpp.i
-
-CMakeFiles/Engine.dir/src/Engine/Engine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Engine.dir/src/Engine/Engine.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp -o CMakeFiles/Engine.dir/src/Engine/Engine.cpp.s
-
 # Object files for target Engine
 Engine_OBJECTS = \
-"CMakeFiles/Engine.dir/src/Main.cpp.o" \
-"CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o" \
-"CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o" \
-"CMakeFiles/Engine.dir/glad.c.o" \
-"CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o"
+"CMakeFiles/Engine.dir/src/OpenGL.cpp.o" \
+"CMakeFiles/Engine.dir/glad.c.o"
 
 # External object files for target Engine
 Engine_EXTERNAL_OBJECTS =
 
-Engine: CMakeFiles/Engine.dir/src/Main.cpp.o
-Engine: CMakeFiles/Engine.dir/src/Math/Vector2.cpp.o
-Engine: CMakeFiles/Engine.dir/src/Math/Vector3.cpp.o
+Engine: CMakeFiles/Engine.dir/src/OpenGL.cpp.o
 Engine: CMakeFiles/Engine.dir/glad.c.o
-Engine: CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o
 Engine: CMakeFiles/Engine.dir/build.make
 Engine: CMakeFiles/Engine.dir/compiler_depend.ts
 Engine: /usr/lib/libglfw.so.3.4
 Engine: CMakeFiles/Engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nero551/Main/Dev/Experiments/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
