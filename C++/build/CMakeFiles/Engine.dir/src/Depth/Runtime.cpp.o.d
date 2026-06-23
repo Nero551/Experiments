@@ -1,7 +1,6 @@
-CMakeFiles/Engine.dir/src/Main.cpp.o: \
-  /home/nero551/Main/Dev/Experiments/C++/src/Main.cpp \
-  /home/nero551/Main/Dev/Experiments/C++/src/PlusUltra.h \
-  /home/nero551/Main/Dev/Experiments/C++/src/Depth/Depth.h \
+CMakeFiles/Engine.dir/src/Depth/Runtime.cpp.o: \
+  /home/nero551/Main/Dev/Experiments/C++/src/Depth/Runtime.cpp \
+  /home/nero551/Main/Dev/Experiments/C++/src/Depth/../PlusUltra.h \
   /home/nero551/Main/Dev/Experiments/C++/src/Depth/../Math/Vector.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/ostream \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/requires_hosted.h \
@@ -215,26 +214,7 @@ CMakeFiles/Engine.dir/src/Main.cpp.o: \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/unicode-data.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/ostream_print.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/ostream.tcc \
-  /home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/chrono \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/chrono.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/ratio \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/parse_numbers.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/sstream \
+  /home/nero551/Main/Dev/Experiments/C++/src/Depth/../Depth/Depth.h \
+  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/iostream \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/istream \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/istream.tcc \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/sstream.tcc \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/vector \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/stl_uninitialized.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/stl_vector.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/stl_bvector.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/vector.tcc \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/shared_ptr.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/shared_ptr_base.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/allocated_ptr.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/refwrap.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/unique_ptr.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/ext/aligned_buffer.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/ext/concurrence.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/align.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/chrono_io.h
+  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../include/c++/16.1.1/bits/istream.tcc

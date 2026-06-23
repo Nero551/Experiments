@@ -22,5 +22,11 @@
   "command": "/usr/bin/clang  -I/home/nero551/Main/Dev/Experiments/C++/Libraries/include  -o CMakeFiles/Engine.dir/glad.c.o -c /home/nero551/Main/Dev/Experiments/C++/glad.c",
   "file": "/home/nero551/Main/Dev/Experiments/C++/glad.c",
   "output": "CMakeFiles/Engine.dir/glad.c.o"
+},
+{
+  "directory": "/home/nero551/Main/Dev/Experiments/C++/build",
+  "command": "/usr/bin/clang++  -I/home/nero551/Main/Dev/Experiments/C++/Libraries/include -std=gnu++23 -o CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o -c /home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp",
+  "file": "/home/nero551/Main/Dev/Experiments/C++/src/Engine/Engine.cpp",
+  "output": "CMakeFiles/Engine.dir/src/Engine/Engine.cpp.o"
 }
 ]

@@ -12,6 +12,7 @@ add_executable(Engine
     src/Math/Vector2.cpp
     src/Math/Vector3.cpp
     glad.c
+    src/Engine/Engine.cpp
 )
 
 

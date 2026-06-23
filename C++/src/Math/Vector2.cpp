@@ -27,6 +27,15 @@ Vector2 operator/(float scalar, const Vector2 &vec2) {
   return vec2 * (1.0f / scalar);
 }
 
+Vector2 &Vector2::operator+=(const Vector2 &vec2) {
+  return *this = *this + vec2;
+}
+Vector2 &Vector2::operator-=(const Vector2 &vec2) {
+  return *this = *this - vec2;
+}
+Vector2 &Vector2::operator*=(float scalar) { return *this = *this * scalar; }
+Vector2 &Vector2::operator/=(float scalar) { return *this = *this / scalar; }
+
 std::ostream &operator<<(std::ostream &os, const Vector2 &vec2) {
   os << "(" << vec2.X << ", " << vec2.Y << ")";
   return os;
