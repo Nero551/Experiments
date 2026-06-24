@@ -10,4 +10,6 @@
     "clangd.checkUpdates": true,
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
     "editor.tabCompletion": "on",
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
 }

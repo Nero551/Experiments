@@ -49,22 +49,15 @@ void InitOpenGL() {
 }
 
 float Vertices[] = {
-  -0.5f,
-  -0.5f,
-  0.0f,
-  0.5f,
-  -0.5f,
-  0.0f,
-  0.0f,
-  0.5f,
-  0.0f,
+  -0.5f,-0.5f,0.0f,
+   0.5f,-0.5f,0.0f,
+   0.0f, 0.5f,0.0f,
 };
-
 void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const char *&fragSource) {
   //* Vertex Shader
   unsigned int vertexShader;
   vertexShader = glCreateShader(GL_VERTEX_SHADER);
-  glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+  glShaderSource(vertexShader, 1, &vertexSource, NULL);
   glCompileShader(vertexShader);
 
   //* Fragment Shader
@@ -84,16 +77,16 @@ void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const 
   glDeleteShader(FragShader);
 }
 
-void CreateVBOVAO(unsigned int &VAO, const int vertexCount, const float vertices[]) {
+void CreateVBOVAO(unsigned int &VAO, int floatCount,  int vertexCount, float vertices[]) {
+  //* Vertex Array Object (VAO)
+  glGenVertexArrays(1, &VAO);
+  glBindVertexArray(VAO);
+
   //* Vertex Buffer Object (VBO)
   unsigned int VBO;
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW);
-
-  //* Vertex Array Object (VAO)
-  glGenVertexArrays(1, &VAO);
-  glBindVertexArray(VAO);
+  glBufferData(GL_ARRAY_BUFFER, floatCount * sizeof(float), vertices, GL_STATIC_DRAW);
 
   glVertexAttribPointer(0, vertexCount, GL_FLOAT, GL_FALSE, vertexCount * sizeof(float), (void *)0);
   glEnableVertexAttribArray(0);
@@ -114,17 +107,18 @@ int main() {
 
   unsigned int VAO;
   unsigned int ShaderProgram;
-  CreateVBOVAO(VAO, 3, Vertices);
   CreateShader(ShaderProgram, vertexShaderSource, fragShaderSource);
+  CreateVBOVAO(VAO,9, 3, Vertices);
 
   while (!glfwWindowShouldClose(Window)) {
     glClearColor(0.1, 0.15, 0.2, 1);
     glClear(GL_COLOR_BUFFER_BIT);
 
     DrawTriangle(ShaderProgram, VAO, 3);
-
-    ProcessInput(Window);
+    
     glfwSwapBuffers(Window);
+    
+    ProcessInput(Window);
     glfwPollEvents();
   }
 
