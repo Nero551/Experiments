@@ -5,19 +5,20 @@ using Godot;
 
 public partial class TimerService
 {
-    private static readonly Dictionary<Timer, Action> Timers = [];
+    private static readonly HashSet<Timer> Timers = [];
 
     public static Timer CreateTimer(float durationInSeconds, bool repeat, Action callback)
     {
-        Timer timer = new() { Duration = durationInSeconds, Remaining = durationInSeconds, Repeat = repeat };
-        Timers.Add(timer, callback);
+        Timer timer = new() {Duration = durationInSeconds, Remaining = durationInSeconds, Repeat = repeat };
+        timer.Duration = 5;
+        Timers.Add(timer);
 
         return timer;
     }
 
     public static void Process(double delta)
     {
-        foreach (var pair in Timers)
+        foreach (Timer  in Timers)
         {
             Timer timer = pair.Key;
             Action callback = pair.Value;
@@ -32,7 +33,7 @@ public partial class TimerService
                 }
                 else
                 {
-                    Timers.Remove(timer);
+                    Destroy(timer);
                 }
             }
         }
