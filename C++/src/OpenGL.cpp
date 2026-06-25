@@ -1,7 +1,12 @@
 #include "OpenGL.h"
 #include <GL/gl.h>
 #include <GLFW/glfw3.h>
+#include <array>
 #include <iostream>
+#include <iterator>
+#include <vector>
+#include "Math/Vector.h"
+#include "Renderer/Renderer.h"
 
 const char *vertexShaderSource = "#version 330 core\n"
 "layout(location = 0) in vec3 aPos;\n"
@@ -48,16 +53,6 @@ void InitOpenGL() {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 }
 
-float Vertices[] = {
-  -0.5f,-0.5f,0.0f,
-  0.5f,-0.5f,0.0f,
-  0.5f, 0.5f,0.0f,
-  -0.5f,0.5f,0.0f,
-};
-unsigned int indices[] = {
-  0,1,2,
-  0,2,3
-};
 void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const char *&fragSource) {
   //* Vertex Shader
   unsigned int vertexShader;
@@ -82,7 +77,7 @@ void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const 
   glDeleteShader(FragShader);
 }
 
-void CreateVAOVBOEBO(unsigned int &VAO, int vertexCount, float vertices[], int indexCount, unsigned int indices[]) {
+void CreateVAOVBOEBO(unsigned int &VAO, std::vector<Vertex> &vertices,std::vector<unsigned int> &indices) {
   //* Vertex Array Object (VAO)
   glGenVertexArrays(1, &VAO);
   glBindVertexArray(VAO);
@@ -91,17 +86,15 @@ void CreateVAOVBOEBO(unsigned int &VAO, int vertexCount, float vertices[], int i
   unsigned int VBO;
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  glBufferData(GL_ARRAY_BUFFER, vertexCount * 3 * sizeof(float), vertices, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 
   unsigned int EBO;
   glGenBuffers(1, &EBO);
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-  glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexCount *  sizeof(float), indices, GL_STATIC_DRAW);
-
-  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
-  glEnableVertexAttribArray(0);
-
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(float), indices.data(), GL_STATIC_DRAW);
   
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)0);
+  glEnableVertexAttribArray(0);
 }
 
 void Draw(unsigned int &ShaderProgram, unsigned int &VAO, int indicesCount) {
@@ -117,10 +110,22 @@ int main() {
   InitOpenGL();
   GLFWwindow *Window = CreateWindow(WindowWidth, WindowHeight, "Plus Ultra");
 
+  std::vector<Vertex> Vertices = {
+    Vertex(Vector3(-0.5,-0.5,0.0)),
+    Vertex(Vector3(0.5,-0.5,0.0)),
+    Vertex(Vector3(0.5,0.5,0.0)),
+    Vertex(Vector3(-0.5,0.5,0.0)),
+  };
+
+  std::vector<unsigned int> Indices = {
+    0,1,2,
+    0,2,3
+  };
+
   unsigned int VAO;
   unsigned int ShaderProgram;
   CreateShader(ShaderProgram, vertexShaderSource, fragShaderSource);
-  CreateVAOVBOEBO(VAO,4, Vertices, 6, indices);
+  CreateVAOVBOEBO(VAO, Vertices, Indices);
 
   while (!glfwWindowShouldClose(Window)) {
     glClearColor(0.1, 0.15, 0.2, 1);

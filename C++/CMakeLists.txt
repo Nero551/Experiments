@@ -9,6 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(Engine)
 add_executable(Engine
     src/OpenGL.cpp
+    src/Renderer/Vertex.cpp
+    src/Math/Vector3.cpp
     glad.c
 )
 

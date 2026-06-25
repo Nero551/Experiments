@@ -1,3 +1,5 @@
+#pragma once
+
 #include <ostream>
 struct Vector2 {
   float X;
