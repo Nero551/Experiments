@@ -10,7 +10,9 @@ project(Engine)
 add_executable(Engine
     src/OpenGL.cpp
     src/Renderer/Vertex.cpp
+    src/Math/Vector2.cpp
     src/Math/Vector3.cpp
+    src/Math/Vector4.cpp
     glad.c
 )
 

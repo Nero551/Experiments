@@ -1,14 +1,15 @@
 #include "Vector.h"
+#include <cmath>
 
-Vector3::Vector3(float x, float y, float z) : X(x), Y(y), Z(z) {}
+Vector3::Vector3(float x, float y, float z) : x(x), y(y), z(z) {}
 
-Vector3 Vector3::operator+(const Vector3 &vec3) const { return {X + vec3.X, Y + vec3.Y, Z + vec3.Z}; }
+Vector3 Vector3::operator+(const Vector3 &vec3) const { return {x + vec3.x, y + vec3.y, z + vec3.z}; }
 
-Vector3 Vector3::operator-(const Vector3 &vec3) const { return {X - vec3.X, Y - vec3.Y, Z - vec3.Z}; }
+Vector3 Vector3::operator-(const Vector3 &vec3) const { return {x - vec3.x, y - vec3.y, z - vec3.z}; }
 
-Vector3 Vector3::operator*(float scalar) const { return {scalar * X, scalar * Y, scalar * Z}; }
+Vector3 Vector3::operator*(float scalar) const { return {scalar * x, scalar * y, scalar * z}; }
 
-Vector3 Vector3::operator/(float scalar) const { return {X / scalar, Y / scalar, Z / scalar}; }
+Vector3 Vector3::operator/(float scalar) const { return {x / scalar, y / scalar, z / scalar}; }
 
 Vector3 operator*(float scalar, const Vector3 &vec3) { return vec3 * scalar; }
 Vector3 operator/(float scalar, const Vector3 &vec3) { return vec3 * (1.0f / scalar); }
@@ -19,20 +20,20 @@ Vector3 &Vector3::operator*=(float scalar) { return *this = *this * scalar; }
 Vector3 &Vector3::operator/=(float scalar) { return *this = *this / scalar; }
 
 std::ostream &operator<<(std::ostream &os, const Vector3 &vec3) {
-  os << "(" << vec3.X << ", " << vec3.Y << ", " << vec3.Z << ")";
+  os << "(" << vec3.x << ", " << vec3.y << ", " << vec3.z << ")";
   return os;
 }
 
-float Vector3::LengthSquared() const { return X * X + Y * Y + Z * Z; }
+float Vector3::LengthSquared() const { return x * x + y * y + z * z; }
 
-float Vector3::Length() const { return Vector3::LengthSquared(); };
+float Vector3::Length() const { return std::sqrt(LengthSquared()); }
 
 Vector3 Vector3::Normalized() const {
   float length = Length();
-  return {X / length, Y / length, Z / length};
+  return {x / length, y / length, z / length};
 }
 
-float Vector3::Dot(const Vector3 &vec3) const { return X * vec3.X + Y * vec3.Y + Z * vec3.Z; }
+float Vector3::Dot(const Vector3 &vec3) const { return x * vec3.x + y * vec3.y + z * vec3.z; }
 
 float Vector3::Distance(const Vector3 &vec3) const { return (*this - vec3).Length(); }
 

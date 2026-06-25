@@ -1,26 +1,12 @@
 #include "OpenGL.h"
-#include <GL/gl.h>
-#include <GLFW/glfw3.h>
-#include <array>
+#include <cmath>
 #include <iostream>
-#include <iterator>
 #include <vector>
 #include "Math/Vector.h"
 #include "Renderer/Renderer.h"
-
-const char *vertexShaderSource = "#version 330 core\n"
-"layout(location = 0) in vec3 aPos;\n"
-"void main()\n"
-"{\n"
-"gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-"}\n";
-
-const char *fragShaderSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
-"void main()\n"
-"{\n"
-"FragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);\n"
-"}\n";
+#include <fstream>
+#include <sstream>
+#include <string>
 
 GLFWwindow *CreateWindow(int width, int height, const char *name) {
   GLFWwindow *window = glfwCreateWindow(width, height, name, NULL, NULL);
@@ -53,31 +39,55 @@ void InitOpenGL() {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 }
 
-void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const char *&fragSource) {
+void CreateShader(unsigned int &shaderProgram, std::string &vertexCode, std::string &fragCode) {
+  const char* vertexSource = vertexCode.c_str();
+  const char* fragSource = fragCode.c_str();
+
   //* Vertex Shader
   unsigned int vertexShader;
   vertexShader = glCreateShader(GL_VERTEX_SHADER);
   glShaderSource(vertexShader, 1, &vertexSource, NULL);
   glCompileShader(vertexShader);
 
+  int success;
+  char infoLog[512];
+  glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+  if (!success){
+    glGetShaderInfoLog(vertexShader,512,NULL,infoLog);
+    std::cout << "ERROR VERTEX SHADER: " << infoLog << "\n";
+  }
+
   //* Fragment Shader
-  unsigned int FragShader;
-  FragShader = glCreateShader(GL_FRAGMENT_SHADER);
-  glShaderSource(FragShader, 1, &fragSource, NULL);
-  glCompileShader(FragShader);
+  unsigned int fragShader;
+  fragShader = glCreateShader(GL_FRAGMENT_SHADER);
+  glShaderSource(fragShader, 1, &fragSource, NULL);
+  glCompileShader(fragShader);
+
+  glGetShaderiv(fragShader, GL_COMPILE_STATUS, &success);
+  if (!success){
+    glGetShaderInfoLog(fragShader,512,NULL,infoLog);
+    std::cout << "ERROR FRAGMENT SHADER: " << infoLog << "\n";
+  }
+
 
   //* Shader Program
-  ShaderProgram = glCreateProgram();
-  glAttachShader(ShaderProgram, vertexShader);
-  glAttachShader(ShaderProgram, FragShader);
-  glLinkProgram(ShaderProgram);
+  shaderProgram = glCreateProgram();
+  glAttachShader(shaderProgram, vertexShader);
+  glAttachShader(shaderProgram, fragShader);
+  glLinkProgram(shaderProgram);
+
+    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+  if (!success){
+    glGetProgramInfoLog(shaderProgram,512,NULL,infoLog);
+    std::cout << "ERROR SHADER PROGRAM LINKING: " << infoLog << "\n";
+  }
 
   //* Cleanup
   glDeleteShader(vertexShader);
-  glDeleteShader(FragShader);
+  glDeleteShader(fragShader);
 }
 
-void CreateVAOVBOEBO(unsigned int &VAO, std::vector<Vertex> &vertices,std::vector<unsigned int> &indices) {
+void CreateVAO(unsigned int &VAO, std::vector<Vertex> &vertices,std::vector<unsigned int> &indices) {
   //* Vertex Array Object (VAO)
   glGenVertexArrays(1, &VAO);
   glBindVertexArray(VAO);
@@ -103,6 +113,48 @@ void Draw(unsigned int &ShaderProgram, unsigned int &VAO, int indicesCount) {
   glDrawElements(GL_TRIANGLES, indicesCount, GL_UNSIGNED_INT, 0);
 }
 
+float DegToRad(float deg){
+  return deg * std::numbers::pi / 180;
+}
+
+void CreateShape(float sides,std::vector<Vertex> &vertices, std::vector<unsigned int> &indices){
+  Vertex centerVertex = Vertex(Vector3(0,0,0));
+  unsigned int centerIndex = 0;
+  vertices.push_back(centerVertex);
+
+
+  for (int i = 0; i < 360; i += (360 / sides)){
+    float cos = std::cos(DegToRad(i));
+    float sin = std::sin(DegToRad(i));
+
+    Vector3 vec3 = Vector3(cos/ 2 ,sin/ 2,0);
+    vertices.push_back(Vertex(vec3));
+    
+  }
+
+  for (unsigned int current = 1; current < vertices.size(); current++)
+  {
+    unsigned int next = current + 1;
+
+    if (next == vertices.size())
+        next = 1;
+
+    indices.push_back(0);
+    indices.push_back(current);
+    indices.push_back(next);
+  }
+}
+
+std::string ReadFile(const std::string& path)
+{
+    std::ifstream file(path);
+
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+
+    return buffer.str();
+}
+
 int main() {
   int WindowWidth = 800;
   int WindowHeight = 800;
@@ -111,27 +163,34 @@ int main() {
   GLFWwindow *Window = CreateWindow(WindowWidth, WindowHeight, "Plus Ultra");
 
   std::vector<Vertex> Vertices = {
-    Vertex(Vector3(-0.5,-0.5,0.0)),
-    Vertex(Vector3(0.5,-0.5,0.0)),
-    Vertex(Vector3(0.5,0.5,0.0)),
-    Vertex(Vector3(-0.5,0.5,0.0)),
+    Vertex(Vector3(0.5,0.5,0)),
+    Vertex(Vector3(0.5,-0.5,0)),
+    Vertex(Vector3(-0.5,-0.5,0)),
+    Vertex(Vector3(-0.5,0.5,0))
   };
-
   std::vector<unsigned int> Indices = {
     0,1,2,
     0,2,3
   };
 
+  std::string vertexShaderSource = ReadFile("src/Shaders/shader.vert");
+  std::string fragShaderSource = ReadFile("src/Shaders/shader.frag");
+
   unsigned int VAO;
   unsigned int ShaderProgram;
   CreateShader(ShaderProgram, vertexShaderSource, fragShaderSource);
-  CreateVAOVBOEBO(VAO, Vertices, Indices);
+  CreateVAO(VAO, Vertices, Indices);
 
   while (!glfwWindowShouldClose(Window)) {
     glClearColor(0.1, 0.15, 0.2, 1);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    Draw(ShaderProgram, VAO, 6);
+    int timeLocation = glGetUniformLocation(ShaderProgram, "Time");
+
+    Draw(ShaderProgram, VAO, Indices.size());
+
+    glUniform1f(timeLocation,glfwGetTime());
+
     
     glfwSwapBuffers(Window);
     

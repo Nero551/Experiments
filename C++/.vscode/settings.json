@@ -12,4 +12,7 @@
     "editor.tabCompletion": "on",
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false,
+
+    "shader-validator.glsl.targetClient": "OpenGL450",
+    "shader-validator.validate": false
 }
