@@ -4,18 +4,18 @@
 #include <iostream>
 
 const char *vertexShaderSource = "#version 330 core\n"
-                                 "layout(location = 0) in vec3 aPos;\n"
-                                 "void main()\n"
-                                 "{\n"
-                                 "gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-                                 "}\n";
+"layout(location = 0) in vec3 aPos;\n"
+"void main()\n"
+"{\n"
+"gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+"}\n";
 
 const char *fragShaderSource = "#version 330 core\n"
-                               "out vec4 FragColor;\n"
-                               "void main()\n"
-                               "{\n"
-                               "FragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);\n"
-                               "}\n";
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"FragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);\n"
+"}\n";
 
 GLFWwindow *CreateWindow(int width, int height, const char *name) {
   GLFWwindow *window = glfwCreateWindow(width, height, name, NULL, NULL);
@@ -50,8 +50,13 @@ void InitOpenGL() {
 
 float Vertices[] = {
   -0.5f,-0.5f,0.0f,
-   0.5f,-0.5f,0.0f,
-   0.0f, 0.5f,0.0f,
+  0.5f,-0.5f,0.0f,
+  0.5f, 0.5f,0.0f,
+  -0.5f,0.5f,0.0f,
+};
+unsigned int indices[] = {
+  0,1,2,
+  0,2,3
 };
 void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const char *&fragSource) {
   //* Vertex Shader
@@ -63,7 +68,7 @@ void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const 
   //* Fragment Shader
   unsigned int FragShader;
   FragShader = glCreateShader(GL_FRAGMENT_SHADER);
-  glShaderSource(FragShader, 1, &fragShaderSource, NULL);
+  glShaderSource(FragShader, 1, &fragSource, NULL);
   glCompileShader(FragShader);
 
   //* Shader Program
@@ -77,7 +82,7 @@ void CreateShader(unsigned int &ShaderProgram, const char *&vertexSource, const 
   glDeleteShader(FragShader);
 }
 
-void CreateVBOVAO(unsigned int &VAO, int floatCount,  int vertexCount, float vertices[]) {
+void CreateVAOVBOEBO(unsigned int &VAO, int vertexCount, float vertices[], int indexCount, unsigned int indices[]) {
   //* Vertex Array Object (VAO)
   glGenVertexArrays(1, &VAO);
   glBindVertexArray(VAO);
@@ -86,16 +91,23 @@ void CreateVBOVAO(unsigned int &VAO, int floatCount,  int vertexCount, float ver
   unsigned int VBO;
   glGenBuffers(1, &VBO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  glBufferData(GL_ARRAY_BUFFER, floatCount * sizeof(float), vertices, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, vertexCount * 3 * sizeof(float), vertices, GL_STATIC_DRAW);
 
-  glVertexAttribPointer(0, vertexCount, GL_FLOAT, GL_FALSE, vertexCount * sizeof(float), (void *)0);
+  unsigned int EBO;
+  glGenBuffers(1, &EBO);
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER, indexCount *  sizeof(float), indices, GL_STATIC_DRAW);
+
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
   glEnableVertexAttribArray(0);
+
+  
 }
 
-void DrawTriangle(unsigned int &ShaderProgram, unsigned int &VAO, int vertexCount) {
+void Draw(unsigned int &ShaderProgram, unsigned int &VAO, int indicesCount) {
   glUseProgram(ShaderProgram);
   glBindVertexArray(VAO);
-  glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+  glDrawElements(GL_TRIANGLES, indicesCount, GL_UNSIGNED_INT, 0);
 }
 
 int main() {
@@ -108,13 +120,13 @@ int main() {
   unsigned int VAO;
   unsigned int ShaderProgram;
   CreateShader(ShaderProgram, vertexShaderSource, fragShaderSource);
-  CreateVBOVAO(VAO,9, 3, Vertices);
+  CreateVAOVBOEBO(VAO,4, Vertices, 6, indices);
 
   while (!glfwWindowShouldClose(Window)) {
     glClearColor(0.1, 0.15, 0.2, 1);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    DrawTriangle(ShaderProgram, VAO, 3);
+    Draw(ShaderProgram, VAO, 6);
     
     glfwSwapBuffers(Window);
     
