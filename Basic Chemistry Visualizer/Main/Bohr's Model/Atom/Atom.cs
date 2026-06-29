@@ -31,7 +31,7 @@ public partial class Atom : Node3D
     public static Atom Create(Element element, Vector3 pos, Node parent)
     {
         
-        var elementData = PULib.JSONHelper.JSONToCSharp($"Main/Chemical Elements/{element}");
+        var elementData = PULib.JSONHelper.JSONToCSharp($"res://Main/Chemical Elements/{element}.json");
         var scene = GD.Load<PackedScene>("res://Main/Scenes/Atom.tscn");
         Atom atom = scene.Instantiate<Atom>();
         atom.Position = pos;
